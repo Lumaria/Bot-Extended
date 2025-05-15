@@ -1,0 +1,32 @@
+# Simplified Setup Instructions for Trading CLI on macOS
+
+# 1. Prerequisites
+#   - Install Homebrew (if you don't have it): Visit https://brew.sh
+#   - Install GMP (a build dependency for some packages):
+#     brew install gmp
+#   - Ensure you have Python 3.9, 3.10, or 3.11. Check with: python3 --version
+#     (If your system Python isn't suitable, consider using `pyenv` to install Python 3.11.x)
+
+# 2. Project Setup & Virtual Environment
+#   - Create a project directory (e.g., MyTradingCLI) and navigate into it:
+#     mkdir ~/Desktop/MyTradingCLI && cd ~/Desktop/MyTradingCLI
+#   - Create a virtual environment (uses your current `python3`):
+#     python3 -m venv venv_cli
+#   - Activate the virtual environment:
+#     source venv_cli/bin/activate
+#     (Your terminal prompt should now show "(venv_cli)")
+
+# 3. Install Dependencies
+#   - Inside the activated (venv_cli) virtual environment, run:
+#     pip install x10-python-trading
+
+# 4. Deploy & Run
+#   - Copy your "CLI" application folder (containing cli.py, config.py, core/, strategies/) 
+#     into your project directory (e.g., MyTradingCLI).
+#   - Update API keys in CLI/config.py.
+#   - Run the application (from your project directory, with (venv_cli) activated):
+#     python CLI/cli.py
+
+# --- To Stop ---
+# - In the CLI application: type "exit".
+# - In the Terminal: type "deactivate" (to exit the virtual environment).
