@@ -4,7 +4,7 @@
 #   - Python 3.11 (Recommended. 3.9 or 3.10 also work):
 #     Check: `python3 --version`.
 #     If you have Python 3.12+ or other issues, you MUST use Python 3.11.x.
-#     Use `pyenv` to install and manage Python versions (see Appendix).
+#     Use `pyenv` to install and manage Python versions 
 
 # 2. Setup Virtual Environment (in your project folder, e.g., "CLI"):
 #   - Go to your project folder: `cd /path/to/your/CLI_project_folder`
