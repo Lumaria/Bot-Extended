@@ -1,32 +1,26 @@
-# Simplified Setup Instructions for Trading CLI on macOS
+# 1. Prerequisites:
+#   - Homebrew: (Install if missing: https://brew.sh)
+#   - GMP: `brew install gmp`
+#   - Python 3.11 (Recommended. 3.9 or 3.10 also work):
+#     Check: `python3 --version`.
+#     If you have Python 3.12+ or other issues, you MUST use Python 3.11.x.
+#     Use `pyenv` to install and manage Python versions (see Appendix).
 
-# 1. Prerequisites
-#   - Install Homebrew (if you don't have it): Visit https://brew.sh
-#   - Install GMP (a build dependency for some packages):
-#     brew install gmp
-#   - Ensure you have Python 3.9, 3.10, or 3.11. Check with: python3 --version
-#     (If your system Python isn't suitable, consider using `pyenv` to install Python 3.11.x)
+# 2. Setup Virtual Environment (in your project folder, e.g., "CLI"):
+#   - Go to your project folder: `cd /path/to/your/CLI_project_folder`
+#   - Create venv with Python 3.11 (ensure it's active if using pyenv: `pyenv local 3.11.9`):
+#     `python3.11 -m venv venv_cli` (or `python3.10 -m venv ...`, `python3.9 -m venv ...`)
+#   - Activate: `source venv_cli/bin/activate` 
 
-# 2. Project Setup & Virtual Environment
-#   - Create a project directory (e.g., MyTradingCLI) and navigate into it:
-#     mkdir ~/Desktop/MyTradingCLI && cd ~/Desktop/MyTradingCLI
-#   - Create a virtual environment (uses your current `python3`):
-#     python3 -m venv venv_cli
-#   - Activate the virtual environment:
-#     source venv_cli/bin/activate
-#     (Your terminal prompt should now show "(venv_cli)")
+# 3. Install Dependencies:
+#   - Inside (venv_cli): `pip install x10-python-trading`
 
-# 3. Install Dependencies
-#   - Inside the activated (venv_cli) virtual environment, run:
-#     pip install x10-python-trading
+# 4. API Keys:
+#   - **MANDATORY**: Edit `config.py` in your CLI folder with your API keys.
 
-# 4. Deploy & Run
-#   - Copy your "CLI" application folder (containing cli.py, config.py, core/, strategies/) 
-#     into your project directory (e.g., MyTradingCLI).
-#   - Update API keys in CLI/config.py.
-#   - Run the application (from your project directory, with (venv_cli) activated):
-#     python CLI/cli.py
+# 5. Run:
+#   - Inside (venv_cli): `python cli.py`
 
-# --- To Stop ---
-# - In the CLI application: type "exit".
-# - In the Terminal: type "deactivate" (to exit the virtual environment).
+# To Stop:
+#   - CLI: type `exit`
+#   - Terminal: type `deactivate`
